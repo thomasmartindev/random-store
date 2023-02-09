@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { CloseButton } from '../utilities/CloseButton'
+import { CloseButton } from '../utilities/Buttons'
 
 export const Banner = ({ closeBanner }) => {
   return (
@@ -8,7 +8,7 @@ export const Banner = ({ closeBanner }) => {
         Get free delivery on orders over $100!
       </Message>
       <CloseButton
-        clickHandler={closeBanner}
+        onClick={closeBanner}
       />
     </Container>
   )
