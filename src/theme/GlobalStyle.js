@@ -1,16 +1,19 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-  * {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   html {
     font-size: 62.5%;
-    position: relative;
+    /* footer support */
     min-height: 100%;
+    position: relative;
   }
 
   body {
@@ -19,15 +22,13 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 1.6rem;
   }
 
-  h1 {
-    font-size: 100%;
+  a {
+    text-decoration: none;
   }
 
   button {
+    border: none;
     cursor: pointer;
-  }
-
-  a {
-    text-decoration: none;
+    outline: none;
   }
 `
