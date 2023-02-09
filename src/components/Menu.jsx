@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { closeMenu } from '../state/features/isMenuOpenSlice'
-import { CloseButton } from './utilities/CloseButton'
+import { CloseButton } from './utilities/Buttons'
 
 export const Menu = () => {
   const dispatch = useDispatch()
@@ -18,7 +18,7 @@ export const Menu = () => {
             Categories
           </Heading>
           <CloseButton
-            clickHandler={() => dispatch(closeMenu())}
+            onClick={() => dispatch(closeMenu())}
           />
         </Wrapper>
         <StyledLink
@@ -35,13 +35,13 @@ export const Menu = () => {
         </StyledLink>
         <StyledLink
           onClick={() => dispatch(closeMenu())}
-          to='/men%27s%20clothing'
+          to='/mensclothing'
         >
           Men's Clothing
         </StyledLink>
         <StyledLink
           onClick={() => dispatch(closeMenu())}
-          to='/women%27s%20clothing'
+          to='/womensclothing'
         >
           Women's Clothing
         </StyledLink>
