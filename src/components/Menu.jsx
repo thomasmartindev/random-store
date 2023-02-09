@@ -23,25 +23,25 @@ export const Menu = () => {
         </Wrapper>
         <StyledLink
           onClick={() => dispatch(closeMenu())}
-          to='/electronics'
+          to='/random-store/electronics'
         >
           Electronics
         </StyledLink>
         <StyledLink
           onClick={() => dispatch(closeMenu())}
-          to='/jewelery'
+          to='/random-store/jewelery'
         >
           Jewelery
         </StyledLink>
         <StyledLink
           onClick={() => dispatch(closeMenu())}
-          to='/mensclothing'
+          to='/random-store/mensclothing'
         >
           Men's Clothing
         </StyledLink>
         <StyledLink
           onClick={() => dispatch(closeMenu())}
-          to='/womensclothing'
+          to='/random-store/womensclothing'
         >
           Women's Clothing
         </StyledLink>

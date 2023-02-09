@@ -28,27 +28,27 @@ export const Navbar = () => {
           onClick={() => dispatch(openMenu())}
         />
         <Logo
-          to='/'
+          to='/random-store'
         >
           RS
         </Logo>
         <StyledLink
-          to='/electronics'
+          to='/random-store/electronics'
         >
           Electronics
         </StyledLink>
         <StyledLink
-          to='/jewelery'
+          to='/random-store/jewelery'
         >
           Jewelery
         </StyledLink>
         <StyledLink
-          to='/mensclothing'
+          to='/random-store/mensclothing'
         >
           Men's Clothing
         </StyledLink>
         <StyledLink
-          to='/womensclothing'
+          to='/random-store/womensclothing'
         >
           Women's Clothing
         </StyledLink>

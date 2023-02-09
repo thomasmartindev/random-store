@@ -19,7 +19,7 @@ export const Home = () => {
           </Description>
           <BlueButton
             as={Link}
-            to='/womensclothing'
+            to='/random-store/womensclothing'
           >
             Shop Now
           </BlueButton>

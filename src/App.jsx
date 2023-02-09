@@ -17,23 +17,23 @@ export const App = () => {
       <Routes>
         <Route 
           element={<Home />}
-          path='/'
+          path='/random-store'
         />
         <Route 
           element={<Electronics />}
-          path='/electronics'
+          path='/random-store/electronics'
         />
         <Route 
           element={<Jewelery />}
-          path='/jewelery'
+          path='/random-store/jewelery'
         />
         <Route 
           element={<MensClothing />}
-          path='/mensclothing'
+          path='/random-store/mensclothing'
         />
         <Route 
           element={<WomensClothing />}
-          path='/womensclothing'
+          path='/random-store/womensclothing'
         />
       </Routes>
       <Menu />
