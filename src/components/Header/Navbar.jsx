@@ -1,13 +1,25 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { HiOutlineShoppingBag } from 'react-icons/hi'
-import { RxHamburgerMenu } from 'react-icons/rx'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { openCart } from '../../state/features/cartSlice'
 import { openMenu } from '../../state/features/isMenuOpenSlice'
+import { CartButton, MenuButton } from '../utilities/Buttons'
 
 export const Navbar = () => {
   const dispatch = useDispatch()
+  const items = useSelector(state => state.cart.items)
+
+  const sumItems = () => {
+    let totalItems = 0
+
+    if (items.length) {
+      items.forEach(item => {
+        totalItems += item.quantity
+      })
+    }
+
+    return totalItems
+  }
 
   return (
     <Container>
@@ -31,23 +43,22 @@ export const Navbar = () => {
           Jewelery
         </StyledLink>
         <StyledLink
-          to='/men%27s%20clothing'
+          to='/mensclothing'
         >
           Men's Clothing
         </StyledLink>
         <StyledLink
-          to='/women%27s%20clothing'
+          to='/womensclothing'
         >
           Women's Clothing
         </StyledLink>
       </Wrapper>
       <CartWrapper
         onClick={() => dispatch(openCart())}
+        itemsLength={items.length}
       >
-        <HiOutlineShoppingBag
-          size='25px'
-        />
-        0
+        <CartButton />
+        {sumItems()}
       </CartWrapper>
     </Container>
   )
@@ -55,13 +66,13 @@ export const Navbar = () => {
 
 const CartWrapper = styled.div`
   align-items: center;
-  color: ${({ theme }) => theme.lightGrey};
+  color: ${({ itemsLength, theme }) => itemsLength ? theme.blue : theme.lightGrey};
   column-gap: 0.5rem;
   cursor: pointer;
   display: flex;
   
   &:hover {
-    color: ${({ theme }) => theme.grey};
+    color: ${({ itemsLength, theme }) => itemsLength ? theme.blueHover : theme.grey};
   }
 `
 
@@ -86,21 +97,6 @@ const Logo = styled(Link)`
   color: ${({ theme }) => theme.blue};
   font-family: 'Lobster';
   font-size: 4rem;
-`
-
-const MenuButton = styled(RxHamburgerMenu)`
-  color: ${({ theme }) => theme.lightGrey};
-  cursor: pointer;
-  height: 25px;
-  width: 25px;
-
-  &:hover {
-    color: ${({ theme }) => theme.grey};
-  }
-
-  @media (min-width: 800px) {
-    display: none;
-  }
 `
 
 const StyledLink = styled(Link)`
