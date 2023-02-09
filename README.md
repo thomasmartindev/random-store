@@ -2,6 +2,8 @@
 
 E-commerce store which contains products from the [Fake Store API](https://fakestoreapi.com/).
 
+NOTE: This website does not have a checkout page (the checkout button within the shopping cart is for aesthetic purposes only).
+
 [Live Demo](https://thomasmdevelopment.github.io/random-store/)
 
 ## Built with
