@@ -10,11 +10,12 @@ export const Header = () => {
 
   return (
     <Container>
-      {isBannerOpen
-        ? <Banner 
-            closeBanner={closeBanner} 
-          />
-        : null
+      {
+        isBannerOpen
+          ? <Banner 
+              closeBanner={closeBanner} 
+            />
+          : null
       }
       <Navbar />
     </Container>
