@@ -6,6 +6,7 @@ import { Electronics } from './components/pages/Electronics'
 import { Jewelery } from './components/pages/Jewelery'
 import { MensClothing } from './components/pages/MensClothing'
 import { WomensClothing } from './components/pages/WomensClothing'
+import { NoMatch } from './components/pages/NoMatch'
 import { Menu } from './components/Menu'
 import { Cart } from './components/Cart/Cart'
 
@@ -34,6 +35,10 @@ export const App = () => {
         <Route 
           element={<WomensClothing />}
           path='/random-store/womensclothing'
+        />
+        <Route 
+          element={<NoMatch />}
+          path='*'
         />
       </Routes>
       <Menu />
