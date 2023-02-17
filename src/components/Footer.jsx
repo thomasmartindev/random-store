@@ -5,10 +5,10 @@ export const Footer = () => {
   return (
     <Container>
       <p>
-        thomasmdevelopment
+        thomasmartindev
       </p>
       <Link
-        href='https://github.com/thomasmdevelopment'
+        href='https://github.com/thomasmartindev'
         target='_blank'
       >
         <Github />
