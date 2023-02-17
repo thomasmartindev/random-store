@@ -8,7 +8,7 @@ Users can add and remove products from their shopping cart and track the total c
 
 IMPORTANT: This project does not have a checkout page (the checkout button within the shopping cart is for aesthetic purposes only).
 
-[Live Preview](https://thomasmdevelopment.github.io/random-store/)
+[Live Preview](https://thomasmartindev.github.io/random-store/)
 
 ## Built with
 
